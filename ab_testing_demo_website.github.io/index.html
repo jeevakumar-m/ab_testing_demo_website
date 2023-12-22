@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"] {
+      padding: 8px;
+      width: 100%;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .item:hover {
+      background-color: #f9f9f9;
+    }
+
+    .item button {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .item button.secondary {
+      background-color: #28a745;
+    }
+
+    .success-message {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #28a745;
+      color: #fff;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Shopping Cart</h2>
+    <input type="text" id="searchInput" placeholder="Search items...">
+    
+    <div class="items">
+      <div class="item">
+        <span>Item 1</span>
+        <button class="add-btn" onclick="addToCart('Item 1')">Add to Cart</button>
+        <button class="add-btn secondary" onclick="addToCart('Item 1')">Add to Cart</button>
+      </div>
+      <div class="item">
+        <span>Item 2</span>
+        <button class="add-btn" onclick="addToCart('Item 2')">Add to Cart</button>
+        <button class="add-btn secondary" onclick="addToCart('Item 2')">Add to Cart</button>
+      </div>
+      <!-- Add more items here -->
+    </div>
+
+    <div class="success-message" id="successMessage">Item added to cart!</div>
+  </div>
+
+  <script>
+    function addToCart(itemName) {
+      // Here you can perform the logic to add the item to the cart or perform other actions.
+      document.getElementById('successMessage').style.display = 'block';
+      setTimeout(() => {
+        document.getElementById('successMessage').style.display = 'none';
+      }, 2000); // Hide the success message after 2 seconds
+    }
+  </script>
+</body>
+</html>
