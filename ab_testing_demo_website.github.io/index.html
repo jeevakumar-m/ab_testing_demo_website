@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create New Ticket</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
 
+    .ticket-box {
+      margin: 50px auto;
+      padding: 20px;
+      border: 2px solid #ccc;
+      width: 300px;
+    }
+
+    .ticket-number {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: 2px solid #007bff;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      margin: 10px;
+    }
+
+    .btn.secondary {
+      background-color: #28a745;
+      border-color: #28a745;
+    }
+  </style>
+</head>
+<body>
+  <div class="ticket-box">
+    <h2>Create New Ticket</h2>
+    <div class="ticket-number" id="ticketNumberDisplay"></div>
+    <button class="btn" onclick="generateTicket()">Create Ticket A</button>
+    <button class="btn secondary" onclick="generateTicket()">Create Ticket B</button>
+  </div>
+
+  <script>
+    function generateTicket() {
+      // Simulating ticket generation process
+      const ticketNumber = Math.floor(Math.random() * 1000) + 1; // Generate a random ticket number
+      document.getElementById('ticketNumberDisplay').innerText = `Ticket Number: ${ticketNumber}`;
+    }
+  </script>
+
+  <a class="btn" href="another-page.html">Go to this webpage from another page</a>
+</body>
+</html>
