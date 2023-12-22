@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Frame 2</title>
+  <style>
+    .btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: 2px solid #28a745;
+      border-radius: 5px;
+      background-color: #28a745;
+      color: #fff;
+      text-decoration: none;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h3>Frame 2</h3>
+  <button onclick="navigateToTicketPage('new-ticket.html')" class="btn">Create Ticket</button>
+
+  <script>
+    function navigateToTicketPage(page) {
+      window.location.href = page;
+    }
+  </script>
+</body>
+</html>
